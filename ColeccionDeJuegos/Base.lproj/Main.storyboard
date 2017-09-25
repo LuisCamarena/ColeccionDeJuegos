@@ -33,7 +33,7 @@
                     <navigationItem key="navigationItem" id="SGA-ch-zzz">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="cfU-40-07u">
                             <connections>
-                                <segue destination="Wqu-M1-W4S" kind="show" id="Yta-pE-3wS"/>
+                                <segue destination="Wqu-M1-W4S" kind="show" identifier="juegoSegue" id="Yta-pE-3wS"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -43,7 +43,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="869.60000000000002" y="-645.42728635682158"/>
+            <point key="canvasLocation" x="961" y="-654"/>
         </scene>
         <!--Juego View Controller-->
         <scene sceneID="3qr-P7-Z8J">
@@ -80,11 +80,20 @@
                                     <action selector="agregarTapped:" destination="Wqu-M1-W4S" eventType="touchUpInside" id="CYF-oe-Fne"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WY9-QF-SZI">
+                                <rect key="frame" x="153" y="349" width="68" height="30"/>
+                                <state key="normal" title="ELIMINAR"/>
+                                <connections>
+                                    <action selector="eliminarTapped:" destination="Wqu-M1-W4S" eventType="touchUpInside" id="GpI-j4-GIY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="pqv-33-sJh" firstAttribute="top" secondItem="NcH-Pb-9aj" secondAttribute="bottom" constant="20" id="21G-0j-9U6"/>
+                            <constraint firstItem="WY9-QF-SZI" firstAttribute="centerX" secondItem="bNF-hN-PLk" secondAttribute="centerX" id="5dd-Og-A4X"/>
                             <constraint firstItem="NcH-Pb-9aj" firstAttribute="top" secondItem="yid-ON-b9T" secondAttribute="bottom" constant="20" id="AGh-eJ-nij"/>
+                            <constraint firstItem="WY9-QF-SZI" firstAttribute="top" secondItem="joB-OO-SjO" secondAttribute="bottom" constant="15" id="Sqz-Lh-Zlc"/>
                             <constraint firstItem="joB-OO-SjO" firstAttribute="top" secondItem="pqv-33-sJh" secondAttribute="bottom" constant="20" id="W3L-UD-Bv8"/>
                             <constraint firstItem="pqv-33-sJh" firstAttribute="centerX" secondItem="bNF-hN-PLk" secondAttribute="centerX" id="acY-VE-3tM"/>
                             <constraint firstItem="pqv-33-sJh" firstAttribute="top" secondItem="NcH-Pb-9aj" secondAttribute="bottom" constant="20" id="fxz-1G-See"/>
@@ -108,12 +117,14 @@
                     </navigationItem>
                     <connections>
                         <outlet property="JuegoImageView" destination="NcH-Pb-9aj" id="WRG-J2-nth"/>
+                        <outlet property="agregarActualizarBoton" destination="joB-OO-SjO" id="gLe-t2-20n"/>
+                        <outlet property="eliminarBoton" destination="WY9-QF-SZI" id="fRp-w2-dHL"/>
                         <outlet property="tituloTextField" destination="pqv-33-sJh" id="AI4-oW-x19"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MoE-wV-Y68" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1512" y="-645"/>
+            <point key="canvasLocation" x="1738" y="-645"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rBN-6Q-lfK">
